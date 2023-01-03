@@ -1,0 +1,42 @@
+clc
+clear all
+close all
+[road,fs]=wavread('road.wav'); % loads “the long and winding road” clip %
+left=road(:,1); right=road(:,2);
+time=(1/fs)*length(left); % Calculate the duration of audio playback %
+t=linspace(0,time,length(left));
+plot(t,left)
+xlabel('time (sec)');
+ylabel('relative signal strength')
+time=(1/44100)*2000; t=linspace(0,time,2000); plot(t,left(1:2000)) xlabel('time (sec)'); ylabel('relative signal strength');
+soundsc(left,fs) % plays left channel as mono soundsc(right,fs) % plays right channel mono sound nearly the same) soundsc(road,fs) % plays stereo (ahhh…)
+load gong.mat;
+sound(y, Fs);
+load handel.mat;
+sound(y, 2*Fs);
+y=[1;2;3;4;5] y2=flipud(y) left2=flipud(left); soundsc(left2,fs)
+leftout=left; %  Create a new array for left with the same size  %
+N=10000; % delay amount N/44100 seconds for n=N+1:length(left) leftout(n)=left(n)+left(n-N); % approximately ¼ second echo End soundsc(left,fs) % original % Wait until the sound stops before moving to next sound command soundsc(leftout,fs) % signal with new echo
+out=road; % set up a new array, same size as old one N=10000; % delay amount N/44100 seconds for n=N+1:length(road) out(n,1)=road(n,1)+road(n-N,2); % echo ight-to-left! out(n,2)=road(n,2)+road(n-N,1); % echo left-to-ight! end soundsc(road,fs) % original soundsc(out,fs) % echo
+[hootie,fs]=wavread('hootie.wav'); % loads Hootie soundsc(hootie,fs/1.5) soundsc(hootie,fs*1.5)
+make sound louder/quieter clear all;
+Fs = 44100; % sampling frequency
+dur = 1; % duration of sound (in sec)
+% time vector
+t = [0 : 1/Fs : dur-1/Fs]; % 1 second --> length(t) = 44100
+% frequency  % Create frequency based on sinusoidal function %
+freq = 440;
+f = sin ( 2*pi * freq * t );
+ %%%%%%%%%%%%%%%%%%%%%
+% scale sound
+amp = .5;
+f_amp = amp * f;
+sound(f_amp,Fs)
+plot( t(1 : 2*round(1/freq*Fs)) , f(1 : 2* round(1/freq*Fs)) )
+hold on
+plot( t(1 : 2*round(1/freq*Fs)) , f_amp(1 : 2* round(1/freq*Fs)) 
+soundsc(left,fs); % Original left channel soundsc(left-right,fs);
+soundsc(hootie(:,1),fs); % Original left channel soundsc(hootie(:,1)-hootie(:,2),fs);
+[hootie,fs]=wavread('hootie.wav'); % loads Hootie out=hootie; for n=2:length(hootie) out(n,1)=.9*out(n-1,1)+hootie(n,1); % left out(n,2)=.9*out(n-1,2)+hootie(n,2); % right end soundsc(hootie,fs) % original soundsc(out,fs) % 
+out=hootie; for n=2:length(hootie) out(n,1)=hootie(n,1)-hootie(n-1,1); % left out(n,2)=hootie(n,2)-hootie(n-1,2); % right end soundsc(out,fs) % high pass filtered
+[perfectSound, freq] = wavread('road.wav'); N= randn(length(perfectSound), 2); noisySound = perfectSound + N;
