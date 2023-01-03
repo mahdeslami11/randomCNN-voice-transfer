@@ -15,18 +15,6 @@ We aim to:
 * **Training fast**. 5-10 minutes to train and transfer on 1 single GPU(Tesla P40).
 * **Do not need dataset!** You can transfer any 2 pieces of audio.(But some format of audio may occur error, then you should `sudo apt-get install libav-tools`)
 
-## Performance compared with other works
-Some of other projects with audio results are as below.
-* [Dmitry Ulyanov: Audio texture synthesis and style transfer](https://dmitryulyanov.github.io/audio-texture-synthesis-and-style-transfer/): The first project of putting forward to use the shallow random CNN for voice transfer. However, the results in this URL is not so good, it sounds like **two voice mixed together**. I used his code on my `boy.wav` and `girl.wav` to generate audio, the result faces the same problem. You can hear the comparison at [Stairway2Nightcall](https://soundcloud.com/mazzzystar/sets/stairway2nightcall), the audio for comparison is downloaded from Dmitry Ulyanov's website.
-* [Google style tranfer results](https://google.github.io/speech_style_transfer/samples.html). The paper is [On Using Backpropagation for Speech Texture Generation and Voice Conversion](https://arxiv.org/abs/1712.08363), the archicture is using 13 layers CONV + pre-trained CTC model. Our results sounds is comparable with theirs, you can hear it on [soundcloud.com](https://soundcloud.com/mazzzystar/sets/speech-conversion-sample)
-* [Voice Style Transfer to Kate Winslet with deep neural networks](https://soundcloud.com/andabi/sets/voice-style-transfer-to-kate-winslet-with-deep-neural-networks). This project has the best results among all current works.(Maybe?) And the cost is:
-	* **Heavy architecture.** We can see from it's [github repo](https://github.com/andabi/deep-voice-conversion) , the architecture is to training 2 networks, `Net1 classifier` and `Net2 synthesizer ` and combine them together
-	* **Delicate dataset.** Except of using widely known dataset such as TIMIT, the author used the girls 2 hours audio dataset, and **1,000+ recording of <boy, girl> pairs audio speaking the same sentence**, that's maybe unacceptable in reality of training others voice.
-    * **Not general.** The model was trained only for *Kate Winslet's* voice transfer. If we want to transfer to Obama's voice, we need to gather Obama's voice data and train that network again.
-
-
-To sum up, our results is far better than the original `random CNN` results, which use the same dataset (only two audio) as we did. For those pre-trained deep neural network based on huge dataset, our results is comparable, and can be traind in 5 minutes, without using any outer dataset.(**But still, all these conclusion are based on human taste.**)
-
 ## Results
 **You can listen to my current result  now !** It's on soundcloud, [link1](https://soundcloud.com/mazzzystar/sets/stairway2nightcall), [link2](https://soundcloud.com/mazzzystar/sets/speech-conversion-sample).
 
