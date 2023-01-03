@@ -1,5 +1,6 @@
 # randomCNN-voice-transfer
-# Alireza Ahmadi
+# Alireza Ahmadi 40114140111015
+# digital signal processing
 # Voice style transfer with random CNN
 Maybe the fastest voice style transfer with reasonable result ?
 ## What is voice style transfer?
