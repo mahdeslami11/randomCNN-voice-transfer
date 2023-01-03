@@ -7,7 +7,7 @@ Maybe the fastest voice style transfer with reasonable result ?
 Inspired by the paper [A Neural Algorithm of Artistic Style](https://arxiv.org/abs/1508.06576) , the idea of `Neural Voice Transfer` aims at  "using Obama's voice to sing songs of Beyoncé" or something related.
 
 We aim to:
-![](picture/purpose.png)
+
 
 ## Highlight of my work
 * Use **2-D CONV** rather than 1-D for audio spectrogram.
@@ -61,3 +61,23 @@ python vctk_identify
 # main source code = https://github.com/mazzzystar/randomCNN-voice-transfer/blob/master/README.md
 # my acount in github = https://github.com/alirezaahmadiii    
 # linkedin = https://www.linkedin.com/in/alireza-ahmadi-245214258
+
+# videos that are going to help you to learn more about this project and more about colab and matrix and machine learning :
+https://drive.google.com/drive/folders/1Sd_onkfdwq63tsg20tfum7vBUTCaQa-K?usp=sharing .1
+https://colab.research.google.com/drive/10-8X59ey1gYBU2Uj3s-2fco1cLcKwGul?usp=sharing .2
+ https://drive.google.com/drive/folders/1Sd_onkfdwq63tsg20tfum7vBUTCaQa-K?usp=sharing .3
+https://drive.google.com/drive/folders/1o5bZ28hl75eHwlEf-SfGKch6km8tYTZG .4
+https://www.aparat.com/v/wPWKh .5
+https://www.aparat.com/v/FCtZ4 .6
+https://aparat.com/v/rncBI .7
+https://aparat.com/v/CzVJn .8
+https://aparat.com/v/OZSFB .9
+https://www.aparat.com/v/wPWKh .10
+https://www.aparat.com/v/FCtZ4 .11
+https://www.aparat.com/v/2o9Hb .12
+https://www.aparat.com/v/jbf2z .13
+https://drive.google.com/drive/folders/1y8bNyDQwvbbm60ih1fMeuu1Apnv76zKC?usp=share_li .14
+nk
+https://drive.google.com/drive/folders/1Sd_onkfdwq63tsg20tfum7vBUTCaQa- .15
+K?usp=share_link
+https://drive.google.com/drive/folders/1o5bZ28hl75eHwlEf-SfGKch6km8tYTZG?usp=share_link .16
