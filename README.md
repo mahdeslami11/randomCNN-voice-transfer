@@ -1,4 +1,5 @@
 # randomCNN-voice-transfer
+# Alireza Ahmadi
 # Voice style transfer with random CNN
 Maybe the fastest voice style transfer with reasonable result ?
 ## What is voice style transfer?
@@ -55,3 +56,7 @@ It seems `texture gram along time-axis` really captured something, you can check
 ```
 python vctk_identify
 ```
+
+# main source code = https://github.com/mazzzystar/randomCNN-voice-transfer/blob/master/README.md
+# my acount in github = https://github.com/alirezaahmadiii    
+# linkedin = https://www.linkedin.com/in/alireza-ahmadi-245214258
