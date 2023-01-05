@@ -1,1 +1,19 @@
+Subjective evaluation and conclusion
 
+
+This Innovation has the best results among all current works  in voice style transfer .
+but the cost is that :
+1.	Heavy architecture. the architecture is to training 2 networks, 
+Net one classifier and Net two synthesizer  and combine them together
+2.	Delicate dataset. Except of using widely known dataset such as TIMIT,
+the author used the girls 2 hours audio dataset, and 1,000+ recording of <boy, girl> pairs audio speaking the same sentence,
+that's maybe unacceptable in reality of training others voice.
+3.	Not general. The model was trained only for Kate Winslet's voice transfer. 
+If we want to transfer to Obama's voice in our project RandomCNN, 
+we need to gather Obama's voice data and train that network again.
+
+and here we have :
+It seems that to apply temperature to softmax in Net1 is not so meaningful.
+net2 can reach to near optimal when Net1 accuracy is correct to some extent.
+We have Over 70% test accuracy
+Obviously, sample rate, window length and hop length should be same in both Net1 and Net2.
