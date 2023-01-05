@@ -1,1 +1,11 @@
 
+This is a many-to-one voice conversion system.The main significance of this Innovation work is that we could generate a target speaker's utterances without parallel...
+...data like <source's wav, target's wav>, <wav, text> or <wav, phone>, but only waveforms of the target speaker .To make these parallel datasets needs a lot of effort.
+All we need is a number of waveforms of the target speaker's utterances and only a small set of <wav, phone> pairs from a number of anonymous speakers.
+The model architecture consists of two modules:
+Net1 classify someone's utterances to one of phoneme classes at every timestep.
+Phonemes are speaker-independent while waveforms are speaker-dependent.
+Net2(speech synthesis) synthesize speeches of the target speaker from the phones.
+
+some information about our net1 : net1 classifies spectrogram to phonemes that consists of 60 English phonemes at every timestep
+some information about our net2 : net2 synthesizes the target speaker's speeches.
